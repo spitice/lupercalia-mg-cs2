@@ -23,7 +23,6 @@ You need install these to plugin work:
   - [x] Debugging commands
   - [x] Misc commands
   - [x] Hide Legs
-  - [x] External View
 - [x] Multigames
   - [x] Team Based Body Color
   - [x] Team Scramble
@@ -117,10 +116,6 @@ Currently provides:
 ### Hide Legs
 
 Hide legs from POV.
-
-### External View
-
-Provides external view system. (e.g. ThirdPerson view)
 
 
 ## Multigames

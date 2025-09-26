@@ -3,7 +3,6 @@ using CounterStrikeSharp.API.Core.Attributes;
 using CounterStrikeSharp.API.Modules.Utils;
 using LupercaliaMGCore.modules;
 using LupercaliaMGCore.modules.AntiCamp;
-using LupercaliaMGCore.modules.ExternalView;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using NativeVoteAPI.API;
@@ -28,7 +27,7 @@ public sealed class LupercaliaMGCore : TncssPluginBase
     public override string ModuleDescription => "Provides core MG feature in CS2 with CounterStrikeSharp";
 
     public override string BaseCfgDirectoryPath => Path.Combine(Server.GameDirectory, "csgo/cfg/mgcore/");
-    
+
     public override string ConVarConfigPath => Path.Combine(BaseCfgDirectoryPath, "mgcore.cfg");
 
     protected override void TncssOnPluginLoad(bool hotReload)
@@ -50,7 +49,6 @@ public sealed class LupercaliaMGCore : TncssPluginBase
         RegisterModule<MiscCommands>();
         RegisterModule<JoinTeamFix>();
         RegisterModule<HideLegs>();
-        RegisterModule<ExternalView>();
         RegisterModule<CourseWeapons>();
         RegisterModule<VelocityDisplay>();
         RegisterModule<Rocket>();
