@@ -42,7 +42,10 @@ public sealed class RoundEndDamageImmunity(IServiceProvider serviceProvider) : P
             if (player == null)
                 return HookResult.Continue;
 
-            player.Health = player.LastHealth;
+            // LastHealth has been removed (Verified in CSSharp v1.0.342)
+            //player.Health = player.LastHealth;
+            // just add back the damage to the player's health
+            player.Health += @event.DmgHealth;
             DebugLogger.LogTrace($"[Round End Damage Immunity] [Player {player.Controller.Value?.PlayerName}] Nullified damage");
             return HookResult.Continue;
         }
